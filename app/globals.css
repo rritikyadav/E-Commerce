@@ -2,5 +2,8 @@
 
 
 body{
-  background-color: whitesmoke;
+  background-color: rgb(231, 227, 227);
+}
+*{
+  scrollbar-width:none;
 }

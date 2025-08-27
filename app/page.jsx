@@ -1,23 +1,20 @@
-export default async function Page() {
+import CategoryCard from "@/Components/categoryCard"
+import ProductCardSquare from "@/Components/ProductCardSquare"
 
-  const response = await fetch('https://fakestoreapi.com/products?limit=5', { method: "GET" });
-  const products = await response.json();
-  console.log(products);
+export default function Page() {
 
   return (
     <>
-      <div className="w-[98vw] h-[80vh] m-auto mt-[5vh] bg-white grid grid-cols-1 md:grid-cols-2">
-        {products.map((product)=>{
-          return(
-            <div key={product.id} className="grid-col-1">
-                <img src={product.image} alt="" />
-                <p>{product.title}</p>
-                <p>{product.price}</p>
-            </div>
-          )
-        })}
+        <CategoryCard category={"men's clothing"}/>
+        <CategoryCard category={"women's clothing"}/>
 
-      </div>
+        <div className="flex gap-2 items-center justify-center">
+          <ProductCardSquare category={"men's clothing"}/> <ProductCardSquare category={"jewelery"}/> <ProductCardSquare category={"electronics"}/>
+        </div>
+
+        <CategoryCard category={"jewelery"}/>
+        <CategoryCard category={"electronics"}/>
+
     </>
   )
 }

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ritik/Desktop/e-commerce/app/Product/%5Bid%5D/page.jsx"],"sourcesContent":["export default function ProductCard({params}){\r\n    const product = params.id;\r\n    return(\r\n        <div>{product}</div>\r\n    )\r\n}"],"names":[],"mappings":";;;;;AAAe,SAAS,YAAY,EAAC,MAAM,EAAC;IACxC,MAAM,UAAU,OAAO,EAAE;IACzB,qBACI,8OAAC;kBAAK;;;;;;AAEd","debugId":null}}]
+}
