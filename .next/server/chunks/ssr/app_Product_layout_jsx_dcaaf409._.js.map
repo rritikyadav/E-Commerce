@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ritik/Desktop/e-commerce/app/Product/layout.jsx"],"sourcesContent":["\"\"\r\n\r\nimport Link from \"next/link\";\r\n\r\nexport const metadata = {\r\n  title: \"Product Page\",\r\n  description: \"Product Description Page\",\r\n};\r\n\r\nexport default function ProductLayout({ children }) {\r\n  return (\r\n    <>\r\n        {children}\r\n        <div className=\"w-[95%] h-[50vh] bg-white m-auto mb-15\">\r\n        <div className=\"text-2xl font-bold\">All Products : </div>\r\n\r\n        </div>\r\n    </>\r\n     \r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIO,MAAM,WAAW;IACtB,OAAO;IACP,aAAa;AACf;AAEe,SAAS,cAAc,EAAE,QAAQ,EAAE;IAChD,qBACE;;YACK;0BACD,8OAAC;gBAAI,WAAU;0BACf,cAAA,8OAAC;oBAAI,WAAU;8BAAqB;;;;;;;;;;;;;AAM5C","debugId":null}}]
+}

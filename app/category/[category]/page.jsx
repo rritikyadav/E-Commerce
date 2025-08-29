@@ -5,14 +5,14 @@ export default async function CategoryPage({ params }) {
   const products = await ApiCall();
 
   return (
-    <div>
+    <div className="overflow-y-auto">
       <div className="capitalize text-4xl text-center m-5 font-semibold p-3">{heading}</div>
-      <div className="flex flex-col gap-3 mb-5">{
+      <div className="flex flex-col gap-3 mb-5 w-[80vw]">{
         products
         .filter((product) => product.category === heading)
         .map((product) => {
           return (
-            <div key={product.id} className="bg-white w-[98%] h-[30vh] m-auto flex items-center gap-[5%] pl-4 box-border">
+            <div key={product.id} className="bg-white w-[95%] h-[30vh] m-auto flex items-center gap-[5%] pl-4 box-border">
               <img className="w-[15%] h-[99%] object-contain" src={product.image} alt="" />
               <div className="w-[60%] flex flex-col gap-2">
                   <p className="text-xl font-bold">{product.title}</p>
