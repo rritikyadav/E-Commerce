@@ -64,11 +64,11 @@ export default function ProductCard({ params }) {
 
             <div className="relative bg-white w-[95%] h-[50vh] m-auto my-5 pt-2 box-border">
                 <div onClick={handleLeftClick} className="absolute z-100 top-1/2 -translate-y-1/2 left-0  h-[15vh] w-[2.5vw] rounded-r-md flex items-center justify-center bg-gray-200 shadow-md cursor-pointer"><b>&lt;</b></div>
-                <div className="text-2xl font-bold mb-6 ml-15 ">All Products &gt;</div>
+                <div className="text-2xl font-bold mb-5 ml-5 ">All Products : </div>
                 <div ref={ScrollContainer} className="w-[100%] h-[40vh] pl-2 box-border grid grid-flow-col auto-cols-[22.5vw] gap-5 overflow-hidden overflow-x-auto scroll-smooth snap-align-center">
                     {products.map((p) => (
                         <Link href={`/Product/${p.id}`} key={p.id}>
-                            <div className="  min-w-[100%] h-[33vh] snap-mandatory cursor-pointer hover:scale-102">
+                            <div className="  min-w-[100%] h-[33vh] snap-mandatory hover:scale-102">
                                 <img className="w-[100%] h-[80%] object-contain" src={p.image} alt="image" />
                                 <p className="line-clamp-1 mt-7 text-center">{p.title}</p>
                                 <p className="font-bold text-center">Rs. {p.price}</p>

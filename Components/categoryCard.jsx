@@ -11,7 +11,7 @@ export default async function CategoryCard(props) {
                 .filter((product) => product.category === props.category).slice(0, 6)
                 .map((product) => {
                     return (
-                     <Link key={product.id} href={`Product/${product.id}`} ><div className=" w-[100%] h-[28vh] cursor-pointer hover:scale-102">
+                     <Link key={product.id} href={`Product/${product.id}`} ><div className=" w-[100%] h-[28vh] hover:scale-102">
                             <img className="w-full h-[60%] object-contain mb-5" src={product.image} alt="image" />
                             <p className="w-full h-[10%] text-center line-clamp-1">{product.title}</p>
                             <p className="text-center">RS.{product.price}</p>

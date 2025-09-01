@@ -1,6 +1,9 @@
 {
+  "/(admin)/login/page": "app/(admin)/login/page.js",
+  "/(admin)/signup/page": "app/(admin)/signup/page.js",
   "/Product/[id]/page": "app/Product/[id]/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/category/[category]/page": "app/category/[category]/page.js",
-  "/page": "app/page.js"
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/signup/page": "app/signup/page.js"
 }
