@@ -33,6 +33,19 @@ export default function Navbar() {
         }
     }
 
+    const handleCart = () => {
+        const token = localStorage.getItem("token")
+        if (token) {
+            router.push("/cart")
+        } else {
+            const confirmation = confirm("To Access Cart LogIn First")
+            if (confirmation) {
+                router.push("/login")
+                return
+            }
+        }
+    }
+
     return (
         <div className="sticky top-0 z-10000 bg-red-900 w-full h-[9vh] flex justify-between items-center pr-10 box-border">
 
@@ -52,7 +65,7 @@ export default function Navbar() {
                     <p>Log In</p>
                 </span></Link>)}
 
-                <span className="flex gap-1">
+                <span onClick={handleCart} className="flex gap-1 cursor-pointer">
                     <img className="invert" src="/cart.svg" alt="" />
                     <p>Cart</p>
                 </span>
