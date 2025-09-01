@@ -28,6 +28,7 @@ export default function SignUp() {
 
             const sign_data = await axios.post('https://fakestoreapi.com/users',FormData)
             console.log(sign_data)
+            alert("Signed Up Successfully")
             router.push("/login")
         }catch(err){
             alert("sign up failed")

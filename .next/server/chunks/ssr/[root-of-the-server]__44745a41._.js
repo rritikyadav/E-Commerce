@@ -40,7 +40,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 async function CategoryPage({ params }) {
-    const heading = params.category.replaceAll("%20", " ");
+    const heading = decodeURIComponent(params.category);
     const products = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Components$2f$apicall$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "overflow-y-auto",
@@ -50,14 +50,14 @@ async function CategoryPage({ params }) {
                 children: heading
             }, void 0, false, {
                 fileName: "[project]/app/category/[category]/page.jsx",
-                lineNumber: 10,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col gap-3 mb-5 w-[80vw]",
                 children: products.filter((product)=>product.category === heading).map((product)=>{
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "bg-white w-[95%] h-[30vh] m-auto flex items-center gap-[5%] pl-4 box-border",
+                        className: "bg-white w-[95%] h-[30vh] m-auto flex items-center gap-[3%] pl-4 box-border",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                 className: "w-[20%] h-[99%] object-contain",
@@ -65,8 +65,8 @@ async function CategoryPage({ params }) {
                                 alt: ""
                             }, void 0, false, {
                                 fileName: "[project]/app/category/[category]/page.jsx",
-                                lineNumber: 17,
-                                columnNumber: 15
+                                lineNumber: 22,
+                                columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: "w-[60%] flex flex-col gap-2",
@@ -76,7 +76,7 @@ async function CategoryPage({ params }) {
                                         children: product.title
                                     }, void 0, false, {
                                         fileName: "[project]/app/category/[category]/page.jsx",
-                                        lineNumber: 19,
+                                        lineNumber: 24,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -84,7 +84,7 @@ async function CategoryPage({ params }) {
                                         children: product.description
                                     }, void 0, false, {
                                         fileName: "[project]/app/category/[category]/page.jsx",
-                                        lineNumber: 20,
+                                        lineNumber: 25,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -100,8 +100,8 @@ async function CategoryPage({ params }) {
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/category/[category]/page.jsx",
-                                                        lineNumber: 23,
-                                                        columnNumber: 19
+                                                        lineNumber: 28,
+                                                        columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                         className: "w-[12px] aspect-1/1 invert",
@@ -109,13 +109,13 @@ async function CategoryPage({ params }) {
                                                         alt: ""
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/category/[category]/page.jsx",
-                                                        lineNumber: 24,
-                                                        columnNumber: 19
+                                                        lineNumber: 29,
+                                                        columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/category/[category]/page.jsx",
-                                                lineNumber: 22,
+                                                lineNumber: 27,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -126,13 +126,13 @@ async function CategoryPage({ params }) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/category/[category]/page.jsx",
-                                                lineNumber: 26,
-                                                columnNumber: 19
+                                                lineNumber: 31,
+                                                columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/category/[category]/page.jsx",
-                                        lineNumber: 21,
+                                        lineNumber: 26,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -143,46 +143,46 @@ async function CategoryPage({ params }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/category/[category]/page.jsx",
-                                        lineNumber: 28,
+                                        lineNumber: 33,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/category/[category]/page.jsx",
-                                lineNumber: 18,
-                                columnNumber: 15
+                                lineNumber: 23,
+                                columnNumber: 17
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                 href: `/Product/${product.id}`,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: " text-xl text-blue-600 underline text-center text-nowrap",
-                                    children: "Add To Cart"
+                                    children: "View Product"
                                 }, void 0, false, {
                                     fileName: "[project]/app/category/[category]/page.jsx",
-                                    lineNumber: 30,
-                                    columnNumber: 54
+                                    lineNumber: 35,
+                                    columnNumber: 55
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/category/[category]/page.jsx",
-                                lineNumber: 30,
-                                columnNumber: 16
+                                lineNumber: 35,
+                                columnNumber: 17
                             }, this)
                         ]
                     }, product.id, true, {
                         fileName: "[project]/app/category/[category]/page.jsx",
-                        lineNumber: 16,
-                        columnNumber: 13
+                        lineNumber: 21,
+                        columnNumber: 15
                     }, this);
                 })
             }, void 0, false, {
                 fileName: "[project]/app/category/[category]/page.jsx",
-                lineNumber: 11,
+                lineNumber: 16,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/category/[category]/page.jsx",
-        lineNumber: 9,
+        lineNumber: 14,
         columnNumber: 5
     }, this);
 }

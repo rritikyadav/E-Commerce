@@ -3,6 +3,7 @@
 import ApiCall from "@/Components/apicall";
 import Link from "next/link";
 import { use, useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ProductCard({ params }) {
     const { id } = use(params)
@@ -11,18 +12,19 @@ export default function ProductCard({ params }) {
     const [products, setProducts] = useState([])
     const [product, setProduct] = useState()
 
+    const router = useRouter()
+
     const ScrollContainer = useRef(null);
 
     useEffect(() => {
+        const fetchdata = async () => {
+            const products = await ApiCall()
+            setProducts(products)
+            const product = products.find((p) => (p.id === product_id));
+            setProduct(product)
+        }
         fetchdata()
     }, [product_id])
-
-    const fetchdata = async () => {
-        const products = await ApiCall()
-        setProducts(products)
-        const product = products.find((p) => (p.id === product_id));
-        setProduct(product)
-    }
 
 
     const handleLeftClick = () => {
@@ -31,6 +33,19 @@ export default function ProductCard({ params }) {
 
     const handleRightClick = () => {
         ScrollContainer.current?.scrollBy({ left: ScrollContainer.current.clientWidth, behavior: "smooth" })
+    }
+
+    const handleAddToCart = () => {
+        const token = localStorage.getItem("token")
+        if (token) {
+            router.push('/cart')
+        } else {
+            const confirmation = confirm("Log In To Access the Cart")
+            if (confirmation) {
+                router.push("/login")
+                return
+            }
+        }
     }
 
     if (!product) {
@@ -56,7 +71,7 @@ export default function ProductCard({ params }) {
                     </span>
                     <p className="text-xl font-bold">Rs. {product.price}</p>
                     <span className="flex gap-5 items-center font-bold text-white text-xl">
-                        <button className="w-[15vw] h-[8vh] bg-yellow-400 flex gap-2 items-center justify-center rounded-md cursor-pointer hover:shadow-lg"><img className="invert" src="/cart.svg" alt="" /><p>Add To Cart</p></button>
+                        <button onClick={handleAddToCart} className="w-[15vw] h-[8vh] bg-yellow-400 flex gap-2 items-center justify-center rounded-md cursor-pointer hover:shadow-lg"><img className="invert" src="/cart.svg" alt="" /><p>Add To Cart</p></button>
                         <button className="w-[15vw] h-[8vh] bg-red-800 flex gap-2 items-center justify-center rounded-md cursor-pointer hover:shadow-lg"><img className="invert" src="/buy.svg" alt="" /><p>Buy Now</p></button>
                     </span>
                 </div>

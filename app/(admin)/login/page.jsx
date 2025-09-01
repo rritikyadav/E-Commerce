@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import axios from "axios"
 import { useRouter } from "next/navigation"
 
@@ -26,6 +26,8 @@ export default function LogIn() {
     try {
       const res = await axios.post("https://fakestoreapi.com/auth/login", Form)
       localStorage.setItem("token", res.data.token)
+      window.dispatchEvent(new Event("storage"))
+      alert("Logged In Succesfully")
       router.push('/')
     } catch (err) {
       alert(err.message)
