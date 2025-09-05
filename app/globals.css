@@ -1,15 +1,51 @@
 @import "tailwindcss";
 
-
-body{
+body {
   background-color: rgb(248, 247, 247);
 }
-*{
-  scrollbar-width:none;
+* {
+  scrollbar-width: none;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+.bg-women {
+  background-image: url("/women-clothing.jpg");
+  background-repeat: space;
+}
+.bg-men {
+  background-image: url("/mens-clothing.jpg");
+  background-repeat: space;
+}
+.bg-electronics {
+  background-image: url("/electronics.jpg");
+  background-repeat: space;
+}
+.bg-jewelery {
+  background-image: url("/jewelery.jpg");
+  background-repeat: space;
+}
+
+@layer utilities {
+  @keyframes scroll {
+    0%, 20%   { transform: translateX(0); }
+
+  25%       { transform: translateX(-100vw); }
+  25%, 45%  { transform: translateX(-100vw); }
+
+  50%       { transform: translateX(-200vw); }
+  50%, 70%  { transform: translateX(-200vw); }
+
+  75%       { transform: translateX(-300vw); }
+  75%, 95%  { transform: translateX(-300vw); }
+
+  100%      { transform: translateX(0); }
+  }
+
+  .animate {
+    animation: scroll 16s infinite ease-in-out;
+  }
 }

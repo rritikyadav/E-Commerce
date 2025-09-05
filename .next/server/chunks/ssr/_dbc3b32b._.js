@@ -27,8 +27,8 @@ function CategoryLayout({ children }) {
                         children: " All Categories : "
                     }, void 0, false, {
                         fileName: "[project]/app/category/[category]/layout.jsx",
-                        lineNumber: 12,
-                        columnNumber: 11
+                        lineNumber: 13,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-col gap-5 ",
@@ -43,18 +43,18 @@ function CategoryLayout({ children }) {
                                             children: "Men's Clothing"
                                         }, void 0, false, {
                                             fileName: "[project]/app/category/[category]/layout.jsx",
-                                            lineNumber: 14,
+                                            lineNumber: 16,
                                             columnNumber: 84
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/category/[category]/layout.jsx",
-                                    lineNumber: 14,
+                                    lineNumber: 16,
                                     columnNumber: 49
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/category/[category]/layout.jsx",
-                                lineNumber: 14,
+                                lineNumber: 16,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -67,18 +67,18 @@ function CategoryLayout({ children }) {
                                             children: "Women's Clothing"
                                         }, void 0, false, {
                                             fileName: "[project]/app/category/[category]/layout.jsx",
-                                            lineNumber: 15,
+                                            lineNumber: 17,
                                             columnNumber: 86
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/category/[category]/layout.jsx",
-                                    lineNumber: 15,
+                                    lineNumber: 17,
                                     columnNumber: 51
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/category/[category]/layout.jsx",
-                                lineNumber: 15,
+                                lineNumber: 17,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -91,18 +91,18 @@ function CategoryLayout({ children }) {
                                             children: "Electronics"
                                         }, void 0, false, {
                                             fileName: "[project]/app/category/[category]/layout.jsx",
-                                            lineNumber: 16,
+                                            lineNumber: 18,
                                             columnNumber: 81
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/category/[category]/layout.jsx",
-                                    lineNumber: 16,
+                                    lineNumber: 18,
                                     columnNumber: 46
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/category/[category]/layout.jsx",
-                                lineNumber: 16,
+                                lineNumber: 18,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -115,33 +115,33 @@ function CategoryLayout({ children }) {
                                             children: "jewelery"
                                         }, void 0, false, {
                                             fileName: "[project]/app/category/[category]/layout.jsx",
-                                            lineNumber: 17,
+                                            lineNumber: 19,
                                             columnNumber: 78
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/category/[category]/layout.jsx",
-                                    lineNumber: 17,
+                                    lineNumber: 19,
                                     columnNumber: 43
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/category/[category]/layout.jsx",
-                                lineNumber: 17,
+                                lineNumber: 19,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/category/[category]/layout.jsx",
-                        lineNumber: 13,
-                        columnNumber: 11
+                        lineNumber: 15,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                         className: "text-center font-bold text-xl mb-8 mt-10",
                         children: "Filters : "
                     }, void 0, false, {
                         fileName: "[project]/app/category/[category]/layout.jsx",
-                        lineNumber: 19,
-                        columnNumber: 11
+                        lineNumber: 22,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-col gap-5 ml-5",
@@ -150,34 +150,34 @@ function CategoryLayout({ children }) {
                                 children: "Brand"
                             }, void 0, false, {
                                 fileName: "[project]/app/category/[category]/layout.jsx",
-                                lineNumber: 22,
-                                columnNumber: 13
+                                lineNumber: 25,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: "Price"
                             }, void 0, false, {
                                 fileName: "[project]/app/category/[category]/layout.jsx",
-                                lineNumber: 23,
-                                columnNumber: 13
+                                lineNumber: 26,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: "Rating"
                             }, void 0, false, {
                                 fileName: "[project]/app/category/[category]/layout.jsx",
-                                lineNumber: 24,
-                                columnNumber: 13
+                                lineNumber: 27,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/category/[category]/layout.jsx",
-                        lineNumber: 21,
-                        columnNumber: 11
+                        lineNumber: 24,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/category/[category]/layout.jsx",
                 lineNumber: 11,
-                columnNumber: 9
+                columnNumber: 7
             }, this),
             children
         ]

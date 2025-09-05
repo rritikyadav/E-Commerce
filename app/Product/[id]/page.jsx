@@ -133,11 +133,11 @@ export default function ProductCard({ params }) {
         <div className="text-2xl font-bold mb-5 ml-5 ">All Products : </div>
         <div
           ref={ScrollContainer}
-          className="w-[100%] h-[40vh] pl-2 box-border grid grid-flow-col auto-cols-[22.5vw] gap-5 overflow-hidden overflow-x-auto scroll-smooth snap-align-center"
+          className="w-[100%] h-[40vh] pl-2 box-border grid grid-flow-col auto-cols-[22.5vw] gap-5 overflow-hidden overflow-x-auto scroll-smooth snap-x snap-mandatory"
         >
           {products.map((p) => (
             <Link href={`/Product/${p.id}`} key={p.id}>
-              <div className="  min-w-[100%] h-[33vh] snap-mandatory hover:scale-102">
+              <div className="  min-w-[100%] h-[33vh] snap-center hover:scale-102">
                 <Image
                   className="w-[100%] h-[80%] object-contain"
                   src={p.image}

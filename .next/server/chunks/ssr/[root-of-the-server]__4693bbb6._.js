@@ -126,6 +126,7 @@ function SignUp() {
         try {
             const sign_data = await __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$axios$2f$lib$2f$axios$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].post('https://fakestoreapi.com/users', FormData);
             console.log(sign_data);
+            alert("Signed Up Successfully");
             router.push("/login");
         } catch (err) {
             alert("sign up failed");
@@ -143,12 +144,12 @@ function SignUp() {
                             children: "New Here ! "
                         }, void 0, false, {
                             fileName: "[project]/app/(admin)/signup/page.jsx",
-                            lineNumber: 40,
+                            lineNumber: 41,
                             columnNumber: 46
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(admin)/signup/page.jsx",
-                        lineNumber: 40,
+                        lineNumber: 41,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -156,13 +157,13 @@ function SignUp() {
                         children: "Sign Up With Your Mobile Number or Email And Get Started ."
                     }, void 0, false, {
                         fileName: "[project]/app/(admin)/signup/page.jsx",
-                        lineNumber: 41,
+                        lineNumber: 42,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                lineNumber: 39,
+                lineNumber: 40,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -180,7 +181,7 @@ function SignUp() {
                                 placeholder: "Enter Email/Mobile Number"
                             }, void 0, false, {
                                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                                lineNumber: 45,
+                                lineNumber: 46,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -192,7 +193,7 @@ function SignUp() {
                                 placeholder: " Set Your Password"
                             }, void 0, false, {
                                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                                lineNumber: 46,
+                                lineNumber: 47,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -200,7 +201,7 @@ function SignUp() {
                                 children: "By continuing, you agree to Our Terms of Use and Privacy Policy."
                             }, void 0, false, {
                                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                                lineNumber: 47,
+                                lineNumber: 48,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -209,13 +210,13 @@ function SignUp() {
                                 children: "Continue"
                             }, void 0, false, {
                                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                                lineNumber: 48,
+                                lineNumber: 49,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(admin)/signup/page.jsx",
-                        lineNumber: 44,
+                        lineNumber: 45,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -225,24 +226,24 @@ function SignUp() {
                             children: "Existing User ? Log In"
                         }, void 0, false, {
                             fileName: "[project]/app/(admin)/signup/page.jsx",
-                            lineNumber: 50,
+                            lineNumber: 51,
                             columnNumber: 37
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(admin)/signup/page.jsx",
-                        lineNumber: 50,
+                        lineNumber: 51,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                lineNumber: 43,
+                lineNumber: 44,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/(admin)/signup/page.jsx",
-        lineNumber: 38,
+        lineNumber: 39,
         columnNumber: 9
     }, this);
 }
