@@ -1,5 +1,6 @@
 import ApiCall from "./apicall"
 import Link from "next/link"
+import Image from "next/image"
 
 export default async function ProductCardSquare(props) {
     const products = await ApiCall()
@@ -13,9 +14,9 @@ export default async function ProductCardSquare(props) {
                     return (
                         <Link href={`Product/${product.id}`} key={product.id}>
                             <div className=" w-[100%] h-[28vh] hover:scale-102">
-                                <img className="w-full h-[60%] object-contain mb-5" src={product.image} alt="" />
+                                <Image className="w-full h-[60%] object-contain mb-5" src={product.image} alt="image" width={100} height={100} />
                                 <p className="w-full h-[10%] text-center line-clamp-1">{product.title}</p>
-                                <p className="text-center">RS.{product.price}</p>
+                                <p className="text-center">₹ {product.price}</p>
                             </div></Link>
                     )
                 })}

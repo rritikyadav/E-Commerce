@@ -11,11 +11,13 @@ __turbopack_context__.s({
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Components$2f$apicall$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Components/apicall.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -60,16 +62,24 @@ function ProductCard(param) {
             behavior: "smooth"
         });
     };
-    const handleAddToCart = ()=>{
+    const handleAddToCart = (product)=>{
+        console.log(product);
         const token = localStorage.getItem("token");
-        if (token) {
-            router.push('/cart');
-        } else {
+        if (!token) {
             const confirmation = confirm("Log In To Access the Cart");
             if (confirmation) {
                 router.push("/login");
                 return;
             }
+        } else {
+            let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+            const existingProduct = cart.find((item)=>item.id === product_id);
+            existingProduct ? existingProduct.quantity += 1 : cart.push({
+                ...product,
+                quantity: 1
+            });
+            localStorage.setItem("cart", JSON.stringify(cart));
+            router.push("/cart");
         }
     };
     if (!product) {
@@ -78,8 +88,8 @@ function ProductCard(param) {
             children: "Loading product..."
         }, void 0, false, {
             fileName: "[project]/app/Product/[id]/page.jsx",
-            lineNumber: 52,
-            columnNumber: 16
+            lineNumber: 65,
+            columnNumber: 12
         }, this);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -87,13 +97,16 @@ function ProductCard(param) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "w-[90%] m-auto mt-10 p-3 box-border flex gap-30 bg-white",
                 children: [
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        className: "object-contain",
                         src: product.image,
-                        alt: ""
+                        alt: "image",
+                        width: 500,
+                        height: 800
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 60,
-                        columnNumber: 17
+                        lineNumber: 71,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-col gap-7 mt-20",
@@ -103,16 +116,16 @@ function ProductCard(param) {
                                 children: product.title
                             }, void 0, false, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 63,
-                                columnNumber: 21
+                                lineNumber: 80,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-lg",
                                 children: product.description
                             }, void 0, false, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 64,
-                                columnNumber: 21
+                                lineNumber: 81,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "flex items-center gap-1",
@@ -127,23 +140,25 @@ function ProductCard(param) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 67,
-                                                columnNumber: 29
+                                                lineNumber: 84,
+                                                columnNumber: 15
                                             }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 className: "w-[12px] aspect-1/1 invert",
                                                 src: "/star.svg",
-                                                alt: ""
+                                                alt: "star",
+                                                width: 24,
+                                                height: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 68,
-                                                columnNumber: 29
+                                                lineNumber: 85,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/Product/[id]/page.jsx",
-                                        lineNumber: 66,
-                                        columnNumber: 25
+                                        lineNumber: 83,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: [
@@ -153,97 +168,103 @@ function ProductCard(param) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/Product/[id]/page.jsx",
-                                        lineNumber: 70,
-                                        columnNumber: 25
+                                        lineNumber: 93,
+                                        columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 65,
-                                columnNumber: 21
+                                lineNumber: 82,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xl font-bold",
                                 children: [
-                                    "Rs. ",
+                                    "₹ ",
                                     product.price
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 72,
-                                columnNumber: 21
+                                lineNumber: 95,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 className: "flex gap-5 items-center font-bold text-white text-xl",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                        onClick: handleAddToCart,
+                                        onClick: ()=>{
+                                            handleAddToCart(product);
+                                        },
                                         className: "w-[15vw] h-[8vh] bg-yellow-400 flex gap-2 items-center justify-center rounded-md cursor-pointer hover:shadow-lg",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 className: "invert",
                                                 src: "/cart.svg",
-                                                alt: ""
+                                                alt: "cart",
+                                                width: 24,
+                                                height: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 74,
-                                                columnNumber: 183
+                                                lineNumber: 103,
+                                                columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: "Add To Cart"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 74,
-                                                columnNumber: 232
+                                                lineNumber: 110,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/Product/[id]/page.jsx",
-                                        lineNumber: 74,
-                                        columnNumber: 25
+                                        lineNumber: 97,
+                                        columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         className: "w-[15vw] h-[8vh] bg-red-800 flex gap-2 items-center justify-center rounded-md cursor-pointer hover:shadow-lg",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 className: "invert",
                                                 src: "/buy.svg",
-                                                alt: ""
+                                                alt: "buy",
+                                                width: 24,
+                                                height: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 75,
-                                                columnNumber: 154
+                                                lineNumber: 113,
+                                                columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: "Buy Now"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 75,
-                                                columnNumber: 202
+                                                lineNumber: 120,
+                                                columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/Product/[id]/page.jsx",
-                                        lineNumber: 75,
-                                        columnNumber: 25
+                                        lineNumber: 112,
+                                        columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 73,
-                                columnNumber: 21
+                                lineNumber: 96,
+                                columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 62,
-                        columnNumber: 17
+                        lineNumber: 79,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/Product/[id]/page.jsx",
-                lineNumber: 58,
-                columnNumber: 13
+                lineNumber: 70,
+                columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "relative bg-white w-[95%] h-[50vh] m-auto my-5 pt-2 box-border",
@@ -255,21 +276,21 @@ function ProductCard(param) {
                             children: "<"
                         }, void 0, false, {
                             fileName: "[project]/app/Product/[id]/page.jsx",
-                            lineNumber: 81,
-                            columnNumber: 210
+                            lineNumber: 131,
+                            columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 81,
-                        columnNumber: 17
+                        lineNumber: 127,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "text-2xl font-bold mb-5 ml-5 ",
                         children: "All Products : "
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 82,
-                        columnNumber: 17
+                        lineNumber: 133,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         ref: ScrollContainer,
@@ -279,22 +300,24 @@ function ProductCard(param) {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "  min-w-[100%] h-[33vh] snap-mandatory hover:scale-102",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                             className: "w-[100%] h-[80%] object-contain",
                                             src: p.image,
-                                            alt: "image"
+                                            alt: "image",
+                                            width: 100,
+                                            height: 100
                                         }, void 0, false, {
                                             fileName: "[project]/app/Product/[id]/page.jsx",
-                                            lineNumber: 87,
-                                            columnNumber: 33
+                                            lineNumber: 141,
+                                            columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "line-clamp-1 mt-7 text-center",
                                             children: p.title
                                         }, void 0, false, {
                                             fileName: "[project]/app/Product/[id]/page.jsx",
-                                            lineNumber: 88,
-                                            columnNumber: 33
+                                            lineNumber: 148,
+                                            columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "font-bold text-center",
@@ -304,24 +327,24 @@ function ProductCard(param) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Product/[id]/page.jsx",
-                                            lineNumber: 89,
-                                            columnNumber: 33
+                                            lineNumber: 149,
+                                            columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/Product/[id]/page.jsx",
-                                    lineNumber: 86,
-                                    columnNumber: 29
+                                    lineNumber: 140,
+                                    columnNumber: 15
                                 }, this)
                             }, p.id, false, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 85,
-                                columnNumber: 25
+                                lineNumber: 139,
+                                columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 83,
-                        columnNumber: 17
+                        lineNumber: 134,
+                        columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         onClick: handleRightClick,
@@ -330,19 +353,19 @@ function ProductCard(param) {
                             children: ">"
                         }, void 0, false, {
                             fileName: "[project]/app/Product/[id]/page.jsx",
-                            lineNumber: 93,
-                            columnNumber: 213
+                            lineNumber: 158,
+                            columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 93,
-                        columnNumber: 17
+                        lineNumber: 154,
+                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/Product/[id]/page.jsx",
-                lineNumber: 80,
-                columnNumber: 13
+                lineNumber: 126,
+                columnNumber: 7
             }, this)
         ]
     }, void 0, true);

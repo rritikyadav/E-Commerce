@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
 
 export default function Navbar() {
@@ -53,20 +54,20 @@ export default function Navbar() {
 
             <div className="flex items-center w-[45%] border border-white pr-1 box-border rounded-md">
                 <input className="w-[96%]  text-white text-base py-1.5 px-4 box-border outline-0 rounded-md" name="search" placeholder="Search" type="text" />
-                <div className="cursor-pointer hover:scale-105"><img src="/search.svg" alt="" /></div>
+                <div className="cursor-pointer hover:scale-105"><Image src="/search.svg" alt="search" width={24} height={24} /></div>
             </div>
 
             <div className="flex gap-10 items-center text-white mr-8">
                 {loggedIn ? (<span onClick={handleLogout} className="flex gap-1 cursor-pointer">
-                    <img className="invert" src="/login.svg" alt="" />
+                    <Image className="invert" src="/login.svg" alt="logout" width={24} height={24} />
                     <p>Log Out</p>
                 </span>) : (<Link href="/login"><span className="flex gap-1">
-                    <img className="invert" src="/login.svg" alt="" />
+                    <Image className="invert" src="/login.svg" alt="login" width={24} height={24} />
                     <p>Log In</p>
                 </span></Link>)}
 
                 <span onClick={handleCart} className="flex gap-1 cursor-pointer">
-                    <img className="invert" src="/cart.svg" alt="" />
+                    <Image className="invert" src="/cart.svg" alt="cart" width={24} height={24} />
                     <p>Cart</p>
                 </span>
             </div>
