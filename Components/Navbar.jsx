@@ -29,7 +29,6 @@ export default function Navbar() {
         if (confirmation) {
             localStorage.removeItem("token");
             window.dispatchEvent(new Event("storage"));
-            alert("Logged Out Successfully");
             router.push("/login");
         }
     };

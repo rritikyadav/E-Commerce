@@ -9,11 +9,12 @@ __turbopack_context__.s({
     "default": ()=>ProductCard
 });
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$Components$2f$apicall$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Components/apicall.jsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-redux/dist/react-redux.mjs [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$redux$2f$cartSlice$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/redux/cartSlice.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -22,32 +23,26 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-function ProductCard(param) {
-    let { params } = param;
+;
+function ProductCard() {
     _s();
-    const { id } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["use"])(params);
+    const { id } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"])();
     const product_id = parseInt(id, 10);
-    const [products, setProducts] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
+    const dispatch = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useDispatch"])();
+    const products = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSelector"])({
+        "ProductCard.useSelector[products]": (state)=>state.Products.items
+    }["ProductCard.useSelector[products]"]);
     const [product, setProduct] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const ScrollContainer = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "ProductCard.useEffect": ()=>{
-            const fetchdata = {
-                "ProductCard.useEffect.fetchdata": async ()=>{
-                    const products = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Components$2f$apicall$2e$jsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"])();
-                    setProducts(products);
-                    const product = products.find({
-                        "ProductCard.useEffect.fetchdata.product": (p)=>p.id === product_id
-                    }["ProductCard.useEffect.fetchdata.product"]);
-                    setProduct(product);
-                }
-            }["ProductCard.useEffect.fetchdata"];
-            fetchdata();
+            const product = products.find({
+                "ProductCard.useEffect.product": (p)=>p.id === product_id
+            }["ProductCard.useEffect.product"]);
+            setProduct(product);
         }
-    }["ProductCard.useEffect"], [
-        product_id
-    ]);
+    }["ProductCard.useEffect"], []);
     const handleLeftClick = ()=>{
         var _ScrollContainer_current;
         (_ScrollContainer_current = ScrollContainer.current) === null || _ScrollContainer_current === void 0 ? void 0 : _ScrollContainer_current.scrollBy({
@@ -72,13 +67,7 @@ function ProductCard(param) {
                 return;
             }
         } else {
-            let cart = JSON.parse(localStorage.getItem("cart") || "[]");
-            const existingProduct = cart.find((item)=>item.id === product_id);
-            existingProduct ? existingProduct.quantity += 1 : cart.push({
-                ...product,
-                quantity: 1
-            });
-            localStorage.setItem("cart", JSON.stringify(cart));
+            dispatch((0, __TURBOPACK__imported__module__$5b$project$5d2f$redux$2f$cartSlice$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["handleAddItems"])(product));
             router.push("/cart");
         }
     };
@@ -88,7 +77,7 @@ function ProductCard(param) {
             children: "Loading product..."
         }, void 0, false, {
             fileName: "[project]/app/Product/[id]/page.jsx",
-            lineNumber: 65,
+            lineNumber: 59,
             columnNumber: 12
         }, this);
     }
@@ -105,7 +94,7 @@ function ProductCard(param) {
                         height: 800
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 71,
+                        lineNumber: 65,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -116,7 +105,7 @@ function ProductCard(param) {
                                 children: product.title
                             }, void 0, false, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 80,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -124,7 +113,7 @@ function ProductCard(param) {
                                 children: product.description
                             }, void 0, false, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 81,
+                                lineNumber: 75,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -140,7 +129,7 @@ function ProductCard(param) {
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 84,
+                                                lineNumber: 78,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -151,13 +140,13 @@ function ProductCard(param) {
                                                 height: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 85,
+                                                lineNumber: 79,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/Product/[id]/page.jsx",
-                                        lineNumber: 83,
+                                        lineNumber: 77,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -168,13 +157,13 @@ function ProductCard(param) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/Product/[id]/page.jsx",
-                                        lineNumber: 93,
+                                        lineNumber: 87,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 82,
+                                lineNumber: 76,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -185,7 +174,7 @@ function ProductCard(param) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 95,
+                                lineNumber: 89,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -205,20 +194,20 @@ function ProductCard(param) {
                                                 height: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 103,
+                                                lineNumber: 97,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: "Add To Cart"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 110,
+                                                lineNumber: 104,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/Product/[id]/page.jsx",
-                                        lineNumber: 97,
+                                        lineNumber: 91,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -232,38 +221,38 @@ function ProductCard(param) {
                                                 height: 24
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 113,
+                                                lineNumber: 107,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: "Buy Now"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                                lineNumber: 120,
+                                                lineNumber: 114,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/Product/[id]/page.jsx",
-                                        lineNumber: 112,
+                                        lineNumber: 106,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 96,
+                                lineNumber: 90,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 79,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/Product/[id]/page.jsx",
-                lineNumber: 70,
+                lineNumber: 64,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -276,12 +265,12 @@ function ProductCard(param) {
                             children: "<"
                         }, void 0, false, {
                             fileName: "[project]/app/Product/[id]/page.jsx",
-                            lineNumber: 131,
+                            lineNumber: 125,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 127,
+                        lineNumber: 121,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -289,7 +278,7 @@ function ProductCard(param) {
                         children: "All Products : "
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 133,
+                        lineNumber: 127,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -308,7 +297,7 @@ function ProductCard(param) {
                                             height: 100
                                         }, void 0, false, {
                                             fileName: "[project]/app/Product/[id]/page.jsx",
-                                            lineNumber: 141,
+                                            lineNumber: 135,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -316,7 +305,7 @@ function ProductCard(param) {
                                             children: p.title
                                         }, void 0, false, {
                                             fileName: "[project]/app/Product/[id]/page.jsx",
-                                            lineNumber: 148,
+                                            lineNumber: 142,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -327,23 +316,23 @@ function ProductCard(param) {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/Product/[id]/page.jsx",
-                                            lineNumber: 149,
+                                            lineNumber: 143,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/Product/[id]/page.jsx",
-                                    lineNumber: 140,
+                                    lineNumber: 134,
                                     columnNumber: 15
                                 }, this)
                             }, p.id, false, {
                                 fileName: "[project]/app/Product/[id]/page.jsx",
-                                lineNumber: 139,
+                                lineNumber: 133,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 134,
+                        lineNumber: 128,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -353,25 +342,28 @@ function ProductCard(param) {
                             children: ">"
                         }, void 0, false, {
                             fileName: "[project]/app/Product/[id]/page.jsx",
-                            lineNumber: 158,
+                            lineNumber: 152,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/page.jsx",
-                        lineNumber: 154,
+                        lineNumber: 148,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/Product/[id]/page.jsx",
-                lineNumber: 126,
+                lineNumber: 120,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true);
 }
-_s(ProductCard, "5BgUYDSxZXZUHPB591PAod4WhFw=", false, function() {
+_s(ProductCard, "mHERGWqNunb1/LX49xZ8NftEo9A=", false, function() {
     return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useParams"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useDispatch"],
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSelector"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];
 });

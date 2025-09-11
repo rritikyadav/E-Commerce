@@ -58,7 +58,7 @@ export default function Slider() {
                     handleRightScroll();
                 }
             }
-        }, 4000);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, []);

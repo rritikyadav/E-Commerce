@@ -1,16 +1,19 @@
 "use client";
 
-import ApiCall from "@/Components/apicall";
 import Link from "next/link";
 import Image from "next/image";
-import { use, useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { useRouter , useParams } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import { handleAddItems } from "@/redux/cartSlice";
 
-export default function ProductCard({ params }) {
-  const { id } = use(params);
+export default function ProductCard() {
+  const { id } = useParams();
   const product_id = parseInt(id, 10);
 
-  const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.Products.items)
+
   const [product, setProduct] = useState();
 
   const router = useRouter();
@@ -18,14 +21,10 @@ export default function ProductCard({ params }) {
   const ScrollContainer = useRef(null);
 
   useEffect(() => {
-    const fetchdata = async () => {
-      const products = await ApiCall();
-      setProducts(products);
-      const product = products.find((p) => p.id === product_id);
-      setProduct(product);
-    };
-    fetchdata();
-  }, [product_id]);
+    const product = products.find((p) => p.id === product_id);
+    setProduct(product);
+  }, []);
+
 
   const handleLeftClick = () => {
     ScrollContainer.current?.scrollBy({
@@ -51,12 +50,7 @@ export default function ProductCard({ params }) {
         return;
       }
     } else {
-      let cart = JSON.parse(localStorage.getItem("cart") || "[]");
-      const existingProduct = cart.find((item) => item.id === product_id);
-      existingProduct
-        ? (existingProduct.quantity += 1)
-        : cart.push({ ...product, quantity: 1 });
-      localStorage.setItem("cart", JSON.stringify(cart));
+      dispatch(handleAddItems(product))
       router.push("/cart");
     }
   };

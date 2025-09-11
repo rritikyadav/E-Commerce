@@ -1,18 +1,12 @@
 {
   "app": {
-    "[project]/app/(admin)/login/page": [
+    "[project]/app/(checkOut)/cart/page": [
       "static/media/06ba6ef833b337bc-s.p.0faac26c.woff2"
     ],
-    "[project]/app/(admin)/signup/page": [
+    "[project]/app/(checkOut)/placeorder/page": [
       "static/media/06ba6ef833b337bc-s.p.0faac26c.woff2"
     ],
     "[project]/app/Product/[id]/page": [
-      "static/media/06ba6ef833b337bc-s.p.0faac26c.woff2"
-    ],
-    "[project]/app/_not-found/page": [
-      "static/media/06ba6ef833b337bc-s.p.0faac26c.woff2"
-    ],
-    "[project]/app/cart/page": [
       "static/media/06ba6ef833b337bc-s.p.0faac26c.woff2"
     ],
     "[project]/app/category/[category]/page": [

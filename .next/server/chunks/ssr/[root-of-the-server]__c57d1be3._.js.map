@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/ritik/Desktop/e-commerce/app/%28checkOut%29/placeOrder/page.jsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst placeOrder = () => {\r\n  return (\r\n    <div>\r\n      yo\r\n    </div>\r\n  )\r\n}\r\n\r\nexport default placeOrder\r\n"],"names":[],"mappings":";;;;AAAA;;;AAEA,MAAM,aAAa;IACjB,qBACE,8OAAC;kBAAI;;;;;;AAIT;uCAEe","debugId":null}}]
+}

@@ -1,9 +1,12 @@
-import ApiCall from "./apicall"
+"use client"
+
+import { useSelector } from "react-redux"
 import Link from "next/link"
 import Image from "next/image"
 
-export default async function CategoryCard(props) {
-    const products = await ApiCall()
+export default function CategoryCard(props) {
+    
+    const products = useSelector((state)=> state.Products.items)
 
     return (
         <div className="w-[98vw] h-[35vh] m-auto my-[2vh] bg-white overflow-hidden grid gap-1 items-center grid-cols-1 lg:grid-cols-4 xl:grid-cols-6">

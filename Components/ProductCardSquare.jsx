@@ -1,9 +1,12 @@
-import ApiCall from "./apicall"
+"use client"
+
+import { useSelector } from "react-redux"
 import Link from "next/link"
 import Image from "next/image"
 
-export default async function ProductCardSquare(props) {
-    const products = await ApiCall()
+export default function ProductCardSquare(props) {
+    
+    const products = useSelector((state)=>state.Products.items)
 
     return (
         <div className="w-[32.3vw] h-[65vh] grid gap-1 grid-cols-2 overflow-hidden bg-white p-4 box-border">

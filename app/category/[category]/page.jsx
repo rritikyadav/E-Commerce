@@ -1,11 +1,16 @@
-import ApiCall from "@/Components/apicall";
+"use client"
+
+import { useSelector } from "react-redux";
 import Link from "next/link";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 
-export default async function CategoryPage({ params }) {
-  const heading = decodeURIComponent(params.category);
+export default function CategoryPage() {
 
-  const products = await ApiCall();
+  const { category } = useParams()
+  const heading = decodeURIComponent(category);
+
+  const products = useSelector((state) => state.Products.items)
 
   return (
     <div className="overflow-y-auto">

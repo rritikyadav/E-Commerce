@@ -1,8 +1,19 @@
+"use client"
+
 import CategoryCard from "@/Components/categoryCard"
 import ProductCardSquare from "@/Components/ProductCardSquare"
 import Slider from "@/Components/slider"
+import { useDispatch } from "react-redux"
+import { fetchProducts } from "@/redux/productSlice.js"
+import { useEffect } from "react"
 
 export default function Page() {
+
+  const dispatch = useDispatch();
+
+  useEffect(()=>{
+    dispatch(fetchProducts())
+  },[dispatch])
 
   return (
     <>

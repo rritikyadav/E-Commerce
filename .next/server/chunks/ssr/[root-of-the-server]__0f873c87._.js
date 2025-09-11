@@ -69,7 +69,6 @@ function Navbar() {
         if (confirmation) {
             localStorage.removeItem("token");
             window.dispatchEvent(new Event("storage"));
-            alert("Logged Out Successfully");
             router.push("/login");
         }
     };
@@ -95,12 +94,12 @@ function Navbar() {
                     children: "E-Commerce"
                 }, void 0, false, {
                     fileName: "[project]/Components/Navbar.jsx",
-                    lineNumber: 53,
+                    lineNumber: 52,
                     columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Components/Navbar.jsx",
-                lineNumber: 52,
+                lineNumber: 51,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -113,7 +112,7 @@ function Navbar() {
                         type: "text"
                     }, void 0, false, {
                         fileName: "[project]/Components/Navbar.jsx",
-                        lineNumber: 57,
+                        lineNumber: 56,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -125,18 +124,18 @@ function Navbar() {
                             height: 24
                         }, void 0, false, {
                             fileName: "[project]/Components/Navbar.jsx",
-                            lineNumber: 64,
+                            lineNumber: 63,
                             columnNumber: 21
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Components/Navbar.jsx",
-                        lineNumber: 63,
+                        lineNumber: 62,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Components/Navbar.jsx",
-                lineNumber: 56,
+                lineNumber: 55,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -154,20 +153,20 @@ function Navbar() {
                                 height: 24
                             }, void 0, false, {
                                 fileName: "[project]/Components/Navbar.jsx",
-                                lineNumber: 71,
+                                lineNumber: 70,
                                 columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: "Log Out"
                             }, void 0, false, {
                                 fileName: "[project]/Components/Navbar.jsx",
-                                lineNumber: 78,
+                                lineNumber: 77,
                                 columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Components/Navbar.jsx",
-                        lineNumber: 70,
+                        lineNumber: 69,
                         columnNumber: 21
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         href: "/login",
@@ -182,25 +181,25 @@ function Navbar() {
                                     height: 24
                                 }, void 0, false, {
                                     fileName: "[project]/Components/Navbar.jsx",
-                                    lineNumber: 83,
+                                    lineNumber: 82,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     children: "Log In"
                                 }, void 0, false, {
                                     fileName: "[project]/Components/Navbar.jsx",
-                                    lineNumber: 90,
+                                    lineNumber: 89,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Components/Navbar.jsx",
-                            lineNumber: 82,
+                            lineNumber: 81,
                             columnNumber: 25
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Components/Navbar.jsx",
-                        lineNumber: 81,
+                        lineNumber: 80,
                         columnNumber: 21
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -215,32 +214,32 @@ function Navbar() {
                                 height: 24
                             }, void 0, false, {
                                 fileName: "[project]/Components/Navbar.jsx",
-                                lineNumber: 96,
+                                lineNumber: 95,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 children: "Cart"
                             }, void 0, false, {
                                 fileName: "[project]/Components/Navbar.jsx",
-                                lineNumber: 103,
+                                lineNumber: 102,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Components/Navbar.jsx",
-                        lineNumber: 95,
+                        lineNumber: 94,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/Components/Navbar.jsx",
-                lineNumber: 68,
+                lineNumber: 67,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Components/Navbar.jsx",
-        lineNumber: 51,
+        lineNumber: 50,
         columnNumber: 9
     }, this);
 }

@@ -25,6 +25,7 @@ export default function LogIn() {
     }
     try {
       const res = await axios.post("https://fakestoreapi.com/auth/login", Form)
+      console.log(res)
       localStorage.setItem("token", res.data.token)
       window.dispatchEvent(new Event("storage"))
       alert("Logged In Succesfully")

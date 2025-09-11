@@ -2,10 +2,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
 import { Inter } from "next/font/google";
+import { ReduxProvider } from "@/redux/Provider.js";
 
 
 const inter = Inter({
-  subsets:["latin"],
+  subsets: ["latin"],
 })
 
 export const metadata = {
@@ -19,8 +20,10 @@ export default function RootLayout({ children }) {
       <body
         className={` ${inter.className}  antialiased`}
       >
-        <Navbar/>
-        {children}
+        <ReduxProvider>
+          <Navbar />
+          {children}
+        </ReduxProvider>
       </body>
     </html>
   );

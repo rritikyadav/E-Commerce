@@ -79,7 +79,7 @@ function Slider() {
                         }
                     }
                 }
-            }["Slider.useEffect.interval"], 4000);
+            }["Slider.useEffect.interval"], 3000);
             return ({
                 "Slider.useEffect": ()=>clearInterval(interval)
             })["Slider.useEffect"];

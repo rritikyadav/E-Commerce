@@ -1,27 +1,14 @@
 "use client"
 
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react"
-import ApiCall from "@/Components/apicall";
+import { useRef } from "react"
+import { useSelector } from "react-redux";
 
-export const generatemetadata = {
-  title: "Product Page",
-  description: "Product Description Page",
-};
 
 export default function ProductLayout({ children }) {
-  const [products_1, setproducts_1] = useState([])
+  const products_1 = useSelector((state) => state.Products.items)
 
   const ref_Container = useRef(null)
-
-  const fetching = async () => {
-    const fetched_products = await ApiCall()
-    setproducts_1(fetched_products)
-  }
-
-  useEffect(() => {
-    fetching()
-  }, [])
 
   const handleleftScroll = () => {
     ref_Container.current?.scrollBy({ left: -ref_Container.current.clientWidth, behaviour: "smooth" })
