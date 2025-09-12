@@ -3,12 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { useRouter , useParams } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { handleAddItems } from "@/redux/cartSlice";
 
 export default function ProductCard() {
-  
+
   const { id } = useParams();
   const product_id = parseInt(id, 10);
 
@@ -62,77 +62,81 @@ export default function ProductCard() {
 
   return (
     <>
-      <div className="w-[90%] m-auto mt-10 p-3 box-border flex gap-30 bg-white">
-        <Image
-          className="object-contain"
-          src={product.image}
-          alt="image"
-          width={500}
-          height={800}
-        />
+      <div className=" w-[98%] md:w-[90%] m-auto mt-10 py-3 md:p-3 box-border bg-white">
+        <p className="text-center w-full text-xl md:text-3xl font-bold mb-5">{product.title}</p>
+        <div className="flex flex-col md:flex-row md:gap-30">
+          <Image
+            className="object-contain w-[200px] h-[300px] md:w-[350px] md:h-[600px] self-center"
+            src={product.image}
+            alt="image"
+            width={3500}
+            height={600}
+          />
 
-        <div className="flex flex-col gap-7 mt-20">
-          <p className="text-3xl font-bold">{product.title}</p>
-          <p className="text-lg">{product.description}</p>
-          <span className="flex items-center gap-1">
-            <span className="flex items-center gap-1 bg-green-700 px-2 box-border rounded-md text-white  font-bold text-[0.8rem]">
-              <p>{product.rating.rate} </p>
-              <Image
-                className="w-[12px] aspect-1/1 invert"
-                src="/star.svg"
-                alt="star"
-                width={24}
-                height={24}
-              />
+          <div className="flex flex-col gap-4 md:gap-7 mt-5 md:mt-15 px-3">
+            <p className=" text-md md:text-lg">{product.description}</p>
+            <span className="flex items-center gap-1">
+              <span className="flex items-center gap-1 bg-green-700 px-2 box-border rounded-md text-white  font-bold text-[0.8rem]">
+                <p>{product.rating.rate} </p>
+                <Image
+                  className="w-[12px] aspect-1/1 invert"
+                  src="/star.svg"
+                  alt="star"
+                  width={24}
+                  height={24}
+                />
+              </span>
+              <p>({product.rating.count})</p>
             </span>
-            <p>({product.rating.count})</p>
-          </span>
-          <p className="text-xl font-bold">₹ {product.price}</p>
-          <span className="flex gap-5 items-center font-bold text-white text-xl">
-            <button
-              onClick={() => {
-                handleAddToCart(product);
-              }}
-              className="w-[15vw] h-[8vh] bg-yellow-400 flex gap-2 items-center justify-center rounded-md cursor-pointer hover:shadow-lg"
-            >
-              <Image
-                className="invert"
-                src="/cart.svg"
-                alt="cart"
-                width={24}
-                height={24}
-              />
-              <p>Add To Cart</p>
-            </button>
-            <button className="w-[15vw] h-[8vh] bg-red-800 flex gap-2 items-center justify-center rounded-md cursor-pointer hover:shadow-lg">
-              <Image
-                className="invert"
-                src="/buy.svg"
-                alt="buy"
-                width={24}
-                height={24}
-              />
-              <p>Buy Now</p>
-            </button>
-          </span>
+            <p className="text-xl font-bold">₹ {product.price}</p>
+            <span className="flex gap-2 md:gap-5 items-center font-bold text-white text-xl">
+              <button
+                onClick={() => {
+                  handleAddToCart(product);
+                }}
+                className="w-[45vw] md:w-[15vw] h-[8vh] bg-yellow-400 flex gap-2 items-center justify-center rounded-md cursor-pointer hover:shadow-lg"
+              >
+                <Image
+                  className="invert"
+                  src="/cart.svg"
+                  alt="cart"
+                  width={24}
+                  height={24}
+                />
+                <p>Add To Cart</p>
+              </button>
+              <button className="w-[45vw] md:w-[15vw] h-[8vh] bg-red-800 flex gap-2 items-center justify-center rounded-md cursor-pointer hover:shadow-lg">
+                <Image
+                  className="invert"
+                  src="/buy.svg"
+                  alt="buy"
+                  width={24}
+                  height={24}
+                />
+                <p>Buy Now</p>
+              </button>
+            </span>
+          </div>
         </div>
       </div>
 
-      <div className="relative bg-white w-[95%] h-[50vh] m-auto my-5 pt-2 box-border">
+
+
+      <div className="relative bg-white w-[98%] h-[41vh] md:h-[50vh] m-auto my-5 pt-2 box-border">
         <div
           onClick={handleLeftClick}
-          className="absolute z-100 top-1/2 -translate-y-1/2 left-0  h-[15vh] w-[2.5vw] rounded-r-md flex items-center justify-center bg-gray-200 shadow-md cursor-pointer"
+          className="absolute z-100 top-1/2 -translate-y-1/2 left-0  h-[15vh] w-[6vw] md:w-[2.5vw] rounded-r-md flex items-center justify-center bg-gray-200 shadow-md cursor-pointer"
         >
           <b>&lt;</b>
         </div>
-        <div className="text-2xl font-bold mb-5 ml-5 ">All Products : </div>
+        <div className="text-2xl font-bold mb-2 ml-2 md:mb-5 md:ml-5 ">All Products : </div>
         <div
           ref={ScrollContainer}
-          className="w-[100%] h-[40vh] pl-2 box-border grid grid-flow-col auto-cols-[22.5vw] gap-5 overflow-hidden overflow-x-auto scroll-smooth snap-x snap-mandatory"
+          className="w-[100%] h-[31vh] md:h-[40vh] md:pl-2 box-border grid grid-flow-col auto-cols-[45vw] md:auto-cols-[22.5vw] gap-5 overflow-hidden overflow-x-auto scroll-smooth snap-x snap-mandatory"
         >
           {products.map((p) => (
             <Link href={`/Product/${p.id}`} key={p.id}>
-              <div className="  min-w-[100%] h-[33vh] snap-center hover:scale-102">
+              <div className="  min-w-[100%] h-[25vh] md:h-[33vh] snap-center hover:scale-102">
                 <Image
                   className="w-[100%] h-[80%] object-contain"
                   src={p.image}
@@ -148,7 +152,7 @@ export default function ProductCard() {
         </div>
         <div
           onClick={handleRightClick}
-          className="absolute z-100 top-1/2 -translate-y-1/2  right-0  h-[15vh] w-[2.5vw] rounded-l-md flex items-center justify-center bg-gray-200 shadow-md cursor-pointer"
+          className="absolute z-100 top-1/2 -translate-y-1/2  right-0  h-[15vh] w-[6vw] md:w-[2.5vw] rounded-l-md flex items-center justify-center bg-gray-200 shadow-md cursor-pointer"
         >
           <b>&gt;</b>
         </div>

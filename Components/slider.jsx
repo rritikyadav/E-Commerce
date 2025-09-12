@@ -64,11 +64,11 @@ export default function Slider() {
     }, []);
 
     return (
-        <div className="relative h-[50vh] w-screen mt-5 bg-white overflow-hidden ">
+        <div className="relative h-[35vh] md:h-[50vh] w-screen mt-5 bg-white overflow-hidden ">
             <span onClick={handleLeftScroll}
-                className="w-[2.5vw] h-[30vh] absolute top-1/2 left-0 -translate-y-1/2
+                className=" w-6 md:w-[2.5vw] h-20 md:h-[30vh] absolute top-1/2 left-0 -translate-y-1/2
                             bg-white/20 backdrop-blur-sm z-500 flex items-center justify-center
-                             cursor-pointer text-4xl font-bold"
+                             cursor-pointer text-2xl md:text-4xl font-bold"
             >
                 &lt;
             </span>
@@ -79,11 +79,11 @@ export default function Slider() {
                         key={box.id}
                         className={`relative ${box.class} h-full w-screen flex-shrink-0 snap-center`}
                     >
-                        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-xl flex flex-col items-center gap-2">
-                            <p>{box.title}</p>
-                            <p>{box.line}</p>
+                        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap font-bold text-lg text-white md:text-black md:text-xl flex flex-col items-center md:gap-2">
+                            <p className="text-white md:text-black">{box.title}</p>
+                            <p className="text-white md:text-black">{box.line}</p>
                             <Link href={`/category/${box.link}`}>
-                                <button className="py-2 px-15 bg-red-900 text-white rounded-md text-lg mt-10 cursor-pointer">
+                                <button className="py-2 px-15 bg-red-900 text-white rounded-md text-lg mt-2 md:mt-10 cursor-pointer">
                                     Shop Now
                                 </button>
                             </Link>
@@ -93,9 +93,9 @@ export default function Slider() {
             </div>
 
             <span onClick={handleRightScroll}
-                className="w-[2.5vw] h-[30vh] absolute top-1/2 right-0 -translate-y-1/2
-             bg-white/20 backdrop-blur-sm z-500 flex items-center justify-center
-              cursor-pointer text-4xl font-bold"
+                className="w-6 md:w-[2.5vw] h-20 md:h-[30vh] absolute top-1/2 right-0 -translate-y-1/2
+                            bg-white/20 backdrop-blur-sm z-500 flex items-center justify-center
+                             cursor-pointer text-2xl md:text-4xl font-bold"
             >
                 &gt;
             </span>

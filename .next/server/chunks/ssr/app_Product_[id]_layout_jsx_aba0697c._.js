@@ -34,10 +34,10 @@ function ProductLayout({ children }) {
         children: [
             children,
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: " relative w-[95%] h-[50vh] bg-red-900 m-auto my-5 pt-2 box-border text-white",
+                className: " relative w-[98%] h-[41vh] bg-red-900 m-auto my-5 pt-2 box-border text-white",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "text-2xl font-bold mb-5 ml-5",
+                        className: "text-2xl font-bold mb-2 ml-2 md:mb-5 md:ml-5",
                         children: "All Products : "
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/layout.jsx",
@@ -46,7 +46,7 @@ function ProductLayout({ children }) {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         onClick: handleleftScroll,
-                        className: "w-[2.5vw] h-[15vh] bg-gray-600 rounded-r-md absolute left-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer",
+                        className: "w-[6vw] md:w-[2.5vw] h-[15vh] bg-gray-600 rounded-r-md absolute left-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer",
                         children: "<"
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/layout.jsx",
@@ -55,12 +55,12 @@ function ProductLayout({ children }) {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         ref: ref_Container,
-                        className: " w-[100%] h-[40vh] pl-2 box-border grid gap-5 grid-flow-col auto-cols-[22.5vw] overflow-hidden overflow-x-auto scroll-smooth snap-x snap-mandatory",
+                        className: " w-[100%] h-[31vh] md:pl-2 box-border grid gap-5 grid-flow-col auto-cols-[45vw] md:auto-cols-[22.5vw] overflow-hidden overflow-x-auto scroll-smooth snap-x snap-mandatory",
                         children: products_1.map((pro)=>{
                             return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: `/Product/${pro.id}`,
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "min-w-[100%] h-[33vh] snap-center hover:scale-102",
+                                    className: "min-w-[100%] h-[25vh] snap-center hover:scale-102",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                             className: "w-full h-[80%] object-contain",
@@ -109,7 +109,7 @@ function ProductLayout({ children }) {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         onClick: handleRightScroll,
-                        className: "w-[2.5vw] h-[15vh] bg-gray-600 rounded-l-md absolute right-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer",
+                        className: "w-[6vw] md:w-[2.5vw] h-[15vh] bg-gray-600 rounded-l-md absolute right-0 top-1/2 -translate-y-1/2 flex items-center justify-center cursor-pointer",
                         children: ">"
                     }, void 0, false, {
                         fileName: "[project]/app/Product/[id]/layout.jsx",

@@ -1,5 +1,11 @@
 {
   "app": {
+    "[project]/app/Product/[id]/page": [
+      "static/media/06ba6ef833b337bc-s.p.0faac26c.woff2"
+    ],
+    "[project]/app/category/[category]/page": [
+      "static/media/06ba6ef833b337bc-s.p.0faac26c.woff2"
+    ],
     "[project]/app/page": [
       "static/media/06ba6ef833b337bc-s.p.0faac26c.woff2"
     ]
