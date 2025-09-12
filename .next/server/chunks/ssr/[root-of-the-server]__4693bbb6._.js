@@ -133,41 +133,41 @@ function SignUp() {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-[55%] h-[70vh] flex items-center justify-center absolute left-1/2 top-1/2 transform -translate-1/2",
+        className: "w-[98%] h-[70vh] flex flex-col absolute left-1/2 top-1/2 transform -translate-1/2   md:w-[55%] md:flex-row",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-red-900 h-full w-[40%] text-white",
+                className: "bg-red-900 h-auto w-full text-white p-5   md:w-[40%] md:h-full md:p-0",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "m-5 text-3xl",
+                        className: "m-2 text-xl md:m-5 md:text-3xl",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
                             children: "New Here ! "
                         }, void 0, false, {
                             fileName: "[project]/app/(admin)/signup/page.jsx",
-                            lineNumber: 41,
-                            columnNumber: 46
+                            lineNumber: 44,
+                            columnNumber: 64
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(admin)/signup/page.jsx",
-                        lineNumber: 41,
+                        lineNumber: 44,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "m-5",
+                        className: "m-2 text-md md:m-5 md:text-regular",
                         children: "Sign Up With Your Mobile Number or Email And Get Started ."
                     }, void 0, false, {
                         fileName: "[project]/app/(admin)/signup/page.jsx",
-                        lineNumber: 42,
+                        lineNumber: 45,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                lineNumber: 40,
+                lineNumber: 42,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-white h-full w-[60%] flex flex-col items-center justify-between p-6 box-border",
+                className: "bg-white h-auto w-full flex flex-col gap-20 items-center justify-between p-2 box-border   md:w-[60%] md:h-full md:p-6",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                         className: "flex flex-col gap-8 w-full mt-8",
@@ -181,7 +181,7 @@ function SignUp() {
                                 placeholder: "Enter Email/Mobile Number"
                             }, void 0, false, {
                                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                                lineNumber: 46,
+                                lineNumber: 51,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -193,7 +193,7 @@ function SignUp() {
                                 placeholder: " Set Your Password"
                             }, void 0, false, {
                                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                                lineNumber: 47,
+                                lineNumber: 52,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -201,7 +201,7 @@ function SignUp() {
                                 children: "By continuing, you agree to Our Terms of Use and Privacy Policy."
                             }, void 0, false, {
                                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                                lineNumber: 48,
+                                lineNumber: 53,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -210,13 +210,13 @@ function SignUp() {
                                 children: "Continue"
                             }, void 0, false, {
                                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                                lineNumber: 49,
+                                lineNumber: 54,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/(admin)/signup/page.jsx",
-                        lineNumber: 45,
+                        lineNumber: 50,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -226,18 +226,18 @@ function SignUp() {
                             children: "Existing User ? Log In"
                         }, void 0, false, {
                             fileName: "[project]/app/(admin)/signup/page.jsx",
-                            lineNumber: 51,
+                            lineNumber: 56,
                             columnNumber: 37
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/(admin)/signup/page.jsx",
-                        lineNumber: 51,
+                        lineNumber: 56,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/(admin)/signup/page.jsx",
-                lineNumber: 44,
+                lineNumber: 48,
                 columnNumber: 13
             }, this)
         ]
