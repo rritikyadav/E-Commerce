@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { handleAddItems } from "@/redux/cartSlice";
 
 export default function ProductCard() {
+  
   const { id } = useParams();
   const product_id = parseInt(id, 10);
 

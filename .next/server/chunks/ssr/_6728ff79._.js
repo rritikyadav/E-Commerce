@@ -1,105 +1,33 @@
 module.exports = {
 
 "[project]/Components/categoryCard.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
-"use strict";
 
-__turbopack_context__.s({
-    "default": ()=>CategoryCard
-});
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react-redux/dist/react-redux.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
-"use client";
-;
-;
-;
-;
-function CategoryCard(props) {
-    const products = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSelector"])((state)=>state.Products.items);
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-[98vw] h-[35vh] m-auto my-[2vh] bg-white overflow-hidden grid gap-1 items-center grid-cols-1 lg:grid-cols-4 xl:grid-cols-6",
-        children: [
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "col-span-6 text-xl ml-2 mb-4 mt-2 capitalize hover:text-red-900",
-                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    href: `/category/${props.category}`,
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
-                        children: [
-                            props.category,
-                            " >"
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/Components/categoryCard.jsx",
-                        lineNumber: 13,
-                        columnNumber: 137
-                    }, this)
-                }, void 0, false, {
-                    fileName: "[project]/Components/categoryCard.jsx",
-                    lineNumber: 13,
-                    columnNumber: 94
-                }, this)
-            }, void 0, false, {
-                fileName: "[project]/Components/categoryCard.jsx",
-                lineNumber: 13,
-                columnNumber: 13
-            }, this),
-            products.filter((product)=>product.category === props.category).slice(0, 6).map((product)=>{
-                return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                    href: `Product/${product.id}`,
-                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: " w-[100%] h-[28vh] hover:scale-102",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                className: "w-full h-[60%] object-contain mb-5",
-                                src: product.image,
-                                alt: "image",
-                                width: 100,
-                                height: 100
-                            }, void 0, false, {
-                                fileName: "[project]/Components/categoryCard.jsx",
-                                lineNumber: 19,
-                                columnNumber: 29
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "w-full h-[10%] text-center line-clamp-1",
-                                children: product.title
-                            }, void 0, false, {
-                                fileName: "[project]/Components/categoryCard.jsx",
-                                lineNumber: 20,
-                                columnNumber: 29
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-center",
-                                children: [
-                                    "₹ ",
-                                    product.price
-                                ]
-                            }, void 0, true, {
-                                fileName: "[project]/Components/categoryCard.jsx",
-                                lineNumber: 21,
-                                columnNumber: 29
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "[project]/Components/categoryCard.jsx",
-                        lineNumber: 18,
-                        columnNumber: 77
-                    }, this)
-                }, product.id, false, {
-                    fileName: "[project]/Components/categoryCard.jsx",
-                    lineNumber: 18,
-                    columnNumber: 22
-                }, this);
-            })
-        ]
-    }, void 0, true, {
-        fileName: "[project]/Components/categoryCard.jsx",
-        lineNumber: 12,
-        columnNumber: 9
-    }, this);
-}
-}),
+var { m: module, e: exports } = __turbopack_context__;
+{
+// "use client"
+// import { useSelector } from "react-redux"
+// import Link from "next/link"
+// import Image from "next/image"
+// export default function CategoryCard(props) {
+//     const products = useSelector((state)=> state.Products.items)
+//     return (
+//         <div className="w-[98vw] h-[35vh] m-auto my-[2vh] bg-white overflow-hidden grid gap-1 items-center grid-cols-6">
+//             <div className="col-span-6 text-xl ml-2 mb-4 mt-2 capitalize hover:text-red-900"><Link href={`/category/${props.category}`}><b>{props.category} &gt;</b></Link></div>
+//             {products
+//                 .filter((product) => product.category === props.category).slice(0, 6)
+//                 .map((product) => {
+//                     return (
+//                      <Link key={product.id} href={`Product/${product.id}`} ><div className=" w-[100%] h-[28vh] hover:scale-102">
+//                             <Image className="w-full h-[60%] object-contain mb-5" src={product.image} alt="image" width={100} height={100} />
+//                             <p className="w-full h-[10%] text-center line-clamp-1">{product.title}</p>
+//                             <p className="text-center">₹ {product.price}</p>
+//                         </div></Link>
+//                     )
+//                 })}
+//         </div>
+//     )
+// }
+}}),
 "[project]/Components/ProductCardSquare.jsx [app-ssr] (ecmascript)": ((__turbopack_context__) => {
 "use strict";
 
@@ -118,10 +46,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$imag
 function ProductCardSquare(props) {
     const products = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$redux$2f$dist$2f$react$2d$redux$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useSelector"])((state)=>state.Products.items);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-[32.3vw] h-[65vh] grid gap-1 grid-cols-2 overflow-hidden bg-white p-4 box-border",
+        className: "flex-1 h-auto grid gap-4 grid-cols-2 overflow-hidden bg-white p-1.5 pt-3 box-border   md:gap-1 md:h-[65vh] md:p-4",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "col-span-2 text-xl mb-4 capitalize hover:text-red-900",
+                className: "col-span-2 text-xl capitalize hover:text-red-900   md:mb-4",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     href: `category/${props.category}`,
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("b", {
@@ -131,42 +59,42 @@ function ProductCardSquare(props) {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Components/ProductCardSquare.jsx",
-                        lineNumber: 13,
-                        columnNumber: 126
+                        lineNumber: 16,
+                        columnNumber: 59
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Components/ProductCardSquare.jsx",
-                    lineNumber: 13,
-                    columnNumber: 84
+                    lineNumber: 16,
+                    columnNumber: 17
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/Components/ProductCardSquare.jsx",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 13
             }, this),
             products.filter((product)=>product.category === props.category).slice(0, 4).map((product)=>{
                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     href: `Product/${product.id}`,
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: " w-[100%] h-[28vh] hover:scale-102",
+                        className: " w-[100%] h-[23vh] hover:scale-102 md:h-[28vh]",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                className: "w-full h-[60%] object-contain mb-5",
+                                className: "w-full h-[60%] md:h-[60%] object-contain mb-3 md:mb-5",
                                 src: product.image,
                                 alt: "image",
                                 width: 100,
                                 height: 100
                             }, void 0, false, {
                                 fileName: "[project]/Components/ProductCardSquare.jsx",
-                                lineNumber: 20,
+                                lineNumber: 23,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "w-full h-[10%] text-center line-clamp-1",
+                                className: "w-full text-center line-clamp-1",
                                 children: product.title
                             }, void 0, false, {
                                 fileName: "[project]/Components/ProductCardSquare.jsx",
-                                lineNumber: 21,
+                                lineNumber: 24,
                                 columnNumber: 33
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -177,18 +105,18 @@ function ProductCardSquare(props) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Components/ProductCardSquare.jsx",
-                                lineNumber: 22,
+                                lineNumber: 25,
                                 columnNumber: 33
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Components/ProductCardSquare.jsx",
-                        lineNumber: 19,
+                        lineNumber: 22,
                         columnNumber: 29
                     }, this)
                 }, product.id, false, {
                     fileName: "[project]/Components/ProductCardSquare.jsx",
-                    lineNumber: 18,
+                    lineNumber: 21,
                     columnNumber: 25
                 }, this);
             })
@@ -405,13 +333,13 @@ function Page() {
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex gap-2 items-center justify-center",
+                className: "w-[98vw] m-auto flex flex-col gap-2 items-center justify-center md:flex-row",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Components$2f$ProductCardSquare$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                         category: "men's clothing"
                     }, void 0, false, {
                         fileName: "[project]/app/page.jsx",
-                        lineNumber: 25,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, this),
                     " ",
@@ -419,7 +347,7 @@ function Page() {
                         category: "jewelery"
                     }, void 0, false, {
                         fileName: "[project]/app/page.jsx",
-                        lineNumber: 25,
+                        lineNumber: 26,
                         columnNumber: 60
                     }, this),
                     " ",
@@ -427,7 +355,7 @@ function Page() {
                         category: "electronics"
                     }, void 0, false, {
                         fileName: "[project]/app/page.jsx",
-                        lineNumber: 25,
+                        lineNumber: 26,
                         columnNumber: 103
                     }, this)
                 ]
@@ -440,14 +368,14 @@ function Page() {
                 category: "jewelery"
             }, void 0, false, {
                 fileName: "[project]/app/page.jsx",
-                lineNumber: 28,
+                lineNumber: 29,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Components$2f$categoryCard$2e$jsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                 category: "electronics"
             }, void 0, false, {
                 fileName: "[project]/app/page.jsx",
-                lineNumber: 29,
+                lineNumber: 30,
                 columnNumber: 9
             }, this)
         ]

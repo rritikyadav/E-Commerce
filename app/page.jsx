@@ -21,7 +21,8 @@ export default function Page() {
         <CategoryCard category={"men's clothing"}/>
         <CategoryCard category={"women's clothing"}/>
 
-        <div className="flex gap-2 items-center justify-center">
+        <div className="w-[98vw] m-auto flex flex-col gap-2 items-center justify-center
+                        md:flex-row">
           <ProductCardSquare category={"men's clothing"}/> <ProductCardSquare category={"jewelery"}/> <ProductCardSquare category={"electronics"}/>
         </div>
 
